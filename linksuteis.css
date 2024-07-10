@@ -1,0 +1,83 @@
+/* Estilos básicos do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(226, 162, 35);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que a altura mínima da página seja igual à altura da viewport */
+}
+
+/* Estilização do cabeçalho */
+header {
+    background-color: #041E42;
+    padding: 10px 20px;
+}
+
+/* Lista de links */
+.horizontal-list {
+    padding: 0;
+    list-style-type: none;
+}
+
+.horizontal-list li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.horizontal-list a {
+    color: orange;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header button { /*Botão voltar */
+    background-color: orange;
+    color:  #02224C;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+header button:hover {
+    background-color: red;
+}
+
+.horizontal-list a:hover {
+    text-decoration: underline;
+    background-color: #041E42;
+}
+/* Estilização para as seções de conteúdo */
+section {
+    text-align: center;
+    margin-bottom: 20px;
+    flex: 1; /* Ocupa todo o espaço disponível entre header e footer */
+}
+
+/* Estilização para os containers de links */
+.image-link-container {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 50px;
+}
+
+.image-container img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #2b1286;
+    padding: 10px;
+}
+
+/* Estilização do footer */
+footer {
+    background-color: #041E42;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: auto; /* Mantém o footer no final da página */
+    font-size: x-small;
+}

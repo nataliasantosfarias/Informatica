@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: auto;
+    padding: 0;
+    background-color: rgb(226, 162, 35);
+}
+
+header { /*cabeçalho */
+    background-color: black;
+    padding: 10px 20px;
+    
+}
+.horizontal-list { /*lista de links */
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+.horizontal-list li { /*lista de links dentro do cabeçalho */
+    display: inline-block;
+    margin: 0 10px;
+}
+.horizontal-list a { /* Cor dos links */
+    color: orange; 
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/*  */
+
+header button { /*Botão voltar */
+    background-color: orange;
+    color:  #02224C;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+    
+}
+
+header button:hover {
+    background-color: red;
+}
+
+.horizontal-list a:hover {
+    text-decoration: underline;
+    background-color: #041E42;
+}
+/* Estilização para a seção sobre nós */
+.about-section {
+    text-align: center;
+    padding: 20px;
+    flex: 1;
+}
+
+.image-link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #041E42;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.about-section h2 {
+    font-size: 24px;
+    color:transparent;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Estilização do footer */
+footer {
+    background-color: #041E42;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: auto;
+    font-size: x-small;
+}
+
+

@@ -25,3 +25,7 @@ eX :
                         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                     />
                     </head>```
+
+Endereço de hospedagem: 
+
+https://nataliasantosfarias.github.io/informaticaV2.io/quemsomos.html

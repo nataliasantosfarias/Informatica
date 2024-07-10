@@ -56,6 +56,13 @@ section {
     margin-bottom: 20px;
     flex: 1; /* Ocupa todo o espaço disponível entre header e footer */
 }
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Estilização para os containers de links */
 .image-link-container {
@@ -65,12 +72,30 @@ section {
 }
 
 .image-container img {
-    width: 150px;
+    width: 200px;
     height: auto;
     border-radius: 10px;
-    border: 3px solid #2b1286;
-    padding: 10px;
+    border: 3px solid #041E42;
+    padding: 5px;
 }
+
+.vertical-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vertical-list a {
+    color: #041E42;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.vertical-list a:hover {
+    color: red;
+}
+
 
 /* Estilização do footer */
 footer {
@@ -80,4 +105,14 @@ footer {
     text-align: center;
     margin-top: auto; /* Mantém o footer no final da página */
     font-size: x-small;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    section {
+        padding: 15px;
+    }
+
+    .image-container img {
+        width: 100px;
+    }
 }

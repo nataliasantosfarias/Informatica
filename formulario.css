@@ -8,7 +8,7 @@
 }
 
 *{
-    margin: 0;
+    margin: 5;
     padding: 0;
 }
 
@@ -21,6 +21,49 @@ body{
     align-items: center;
     height: 100vh;
 }
+header {
+    background-color: #041E42;
+    padding: 10px 20px;
+}
+
+.horizontal-list { /* lista de links */
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+.horizontal-list li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.horizontal-list a {
+    color: orange;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+header button { /*Botão voltar */
+    background-color: orange;
+    color:  #02224C;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+header button:hover {
+    background-color: red;
+}
+
+.horizontal-list a:hover {
+    text-decoration: underline;
+    background-color: #041E42;
+}
+
+
 
 .content{
     background-color: var(--color-dark2);

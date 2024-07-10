@@ -1,102 +1,139 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
-    <title>formulario</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="form.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Formulário GN</title>
 </head>
-
 <body>
-    <header>
-        <section>
-            <!-- Sessão de links dentro do cabeçalho da página principal -->
-            <ul class="horizontal-list">
-                <a href="quemsomos.html"><li>Quem Somos</li></a>
-                <a href="linksuteis.html"><li>Links Úteis</li></a>
-                <a href="noticias.html"><li>Notícias</li></a>
-                <a href="form.html"><li>formulario</li></a>
-                <button onclick="window.location.href='index.html'" >Voltar</button>
-            </ul>
-        </section>
-    </header>
-
-
-
-    <div>
-        <h1 id="titulo">Cadastro de DEVs</h1>
-        <p id="subtitulo">Complete suas informações</p>
+    <div class="content">
+        <h1>✏️ Formulário </h1>
+        <form id="form">
+            <div>
+                <input type="text" placeholder="Digite seu nome" class="inputs required" oninput="nameValidate()">
+                <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
+            </div>
+            <div>
+                <input type="email" placeholder="Digite seu melhor email" class="inputs required" oninput="emailValidate()">
+                <span class="span-required">Digite um email válido</span>
+            </div>
+            <div>
+                <input type="password" placeholder="Senha" class="inputs required" oninput="mainPasswordValidate()">
+                <span class="span-required">Digite uma senha com no mínimo 8 caracteres</span>
+            </div>
+            <div>
+                <input type="password" placeholder="Repita a sua senha" class="inputs required" oninput="comparePassword()">
+                <span class="span-required">Senhas devem ser compatíveis</span>
+            </div>
+            <textarea class="inputs" name="descricao" id="descricao" cols="25" rows="10" placeholder="Fale um pouco sobre você..."></textarea>
+            <p>Sexo:</p>
+            <div class="box-select">
+                <div>
+                    <input type="radio" id="m" value="m" name="sexo">
+                    <label for="m">Masculino</label>
+                </div>
+                <div>
+                    <input type="radio" id="f" value="f" name="sexo">
+                    <label for="f">Feminino</label>
+                </div>
+                <div>
+                    <input type="radio" id="o" value="o" name="sexo">
+                    <label for="o">Outro</label>
+                </div>
+            </div>
+            <p>Quais suas experiências ?</p>
+            <div class="box-select">
+                <div>
+                    <input type="checkbox" id="html" value="html" name="experiencias">
+                    <label for="html">Html</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="css" value="css" name="experiencias">
+                    <label for="css">Css</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="js" value="js" name="experiencias">
+                    <label for="js">JavaScript</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="php" value="php" name="experiencias">
+                    <label for="php">PHP</label>
+                </div>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
     </div>
-    <form>
-        <fieldset class="grupo">
-            <div class="campo">
-                <label for="nome"><strong>Nome</strong></label>
-                <input type="text" name="nome" id="nome" required></input>
-            </div>
-            <div class="campo">
-                <label for="sobrenome"><strong>Sobrenome</strong></label>
-                <input type="text" name="sobrenome" id="sobrenome" required>
-            </div>
-        </fieldset>
-        <br>
-        <div class="campo">
-            <label for="email"><strong>Email</strong></label>
-            <input type="email" name="email" id="email" required>
-        </div>
-        <br>
-        <div class="campo">
-            <label><strong>De qual lado da aplicação você desenvolve?</strong></label>
-            <label>
-                <input type="radio" nome="devweb" value="frontend" checked>Front-end
-                </input>
-            </label>
-            <label>
-                <input type="radio" nome="devweb" value="backend">Back-end
-                </input>
-            </label>
-            <label>
-                <input type="radio" nome="devweb" value="fullstack">Fullstack
-                </input>
-            </label>
-        </div>
-        <br>
-        <div class="campo">
-            <label for="senioridade"><strong> Senioridade </strong></label>
-            <select id="senioridade">
-                <option selected disable value="">Selecione</option>
-                <option>Junior</option>
-                <option>Pleno</option>
-                <option>Senior</option>
-            </select>
-
-        </div>
-        <fieldset class="grupo">
-            <div class="campo">
-                <label><strong>Selecione as tecnologias que utiliza:</strong></label><br><br>
-                <input type="checkbox" id="tecnologia1" value="HTML">
-                <label type="tecnologia1">HTML</label>
-                <input type="checkbox" id="tecnologia2" value="CSS">
-                <label type="tecnologia2">CSS</label>
-                <input type="checkbox" id="tecnologia3" value="javascript">
-                <label type="tecnologia3">Javascript</label>
-                <input type="checkbox" id="tecnologia4" value="PHP">
-                <label type="tecnologia4">PHP</label>
-                <input type="checkbox" id="tecnologia5" value="C#">
-                <label type="tecnologia5">C#</label>
-                <input type="checkbox" id="tecnologia6" value="python">
-                <label type="tecnologia6">Python</label>
-                <input type="checkbox" id="tecnologia7" value="java">
-                <label type="tecnologia7">Java</label>
-            </div>
-        </fieldset>
-        <div class="campo">
-            <br>
-            <label><strong>Conte um pouco da sua experiência:</strong></label>
-            <textarea row="6" style="width: 26em" id="experiencia" nome="experiencia"></textarea>
-        </div>
-        <button class="botao" type="submit">Concluir</button>
-    </form>
 </body>
+<script>
+    const form   = document.getElementById('form');
+    const campos = document.querySelectorAll('.required');
+    const spans  = document.querySelectorAll('.span-required');
+    const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
 
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        nameValidate();
+        emailValidate();
+        mainPasswordValidate();
+        comparePassword();
+    });
+
+    function setError(index){
+        campos[index].style.border = '2px solid #e63636';
+        spans[index].style.display = 'block';
+    }
+
+    function removeError(index){
+        campos[index].style.border = '';
+        spans[index].style.display = 'none';
+    }
+
+    function nameValidate(){
+        if(campos[0].value.length < 3)
+        {
+            setError(0);
+        }
+        else
+        {
+            removeError(0);
+        }
+    }
+
+    function emailValidate(){
+        if(!emailRegex.test(campos[1].value))
+        {
+            setError(1);
+        }
+        else
+        {
+            removeError(1);
+        }
+    }
+
+    function mainPasswordValidate(){
+        if(campos[2].value.length < 8)
+        {
+            setError(2);
+        }
+        else
+        {
+            removeError(2);
+            comparePassword();
+        }
+    }
+
+    function comparePassword(){
+        if(campos[2].value == campos[3].value && campos[3].value.length >= 8)
+        {
+            removeError(3);
+        }
+        else
+        {
+            setError(3);
+        }
+    }
+
+</script>
 </html>

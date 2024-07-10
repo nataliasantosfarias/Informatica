@@ -26,6 +26,3 @@ eX :
                     />
                     </head>```
 
-Endereço de hospedagem: 
-
-https://nataliasantosfarias.github.io/informaticaV2.io/quemsomos.html

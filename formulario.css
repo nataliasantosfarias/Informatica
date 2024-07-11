@@ -164,6 +164,16 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: green;
 }
+footer {
+    background-color: #041E42;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: auto;
+    font-size: x-small;
+    width: 100%;
+}
+
 /* animação  da tela quem somos */
 @keyframes fadeInUp {
     from {

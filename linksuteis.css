@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 /* Estilos básicos do corpo da página */
 body {
     font-family: Arial, sans-serif;
@@ -59,10 +66,64 @@ section {
 }
 main {
     flex: 1;
-    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.links-uteis {
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.link-item {
+    background-color: var(--color-dark2);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.link-info {
+    text-align: center;
+}
+
+.link-info h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.link-info p {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.link-info a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: orange;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.link-info a:hover {
+    background-color: #e63636;
 }
 
 /* Estilização para os containers de links */

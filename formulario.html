@@ -4,11 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="formulario.css">
-    <script src="formulario.js"></script>
-    <title>Formulário GN</title>
+    <script defer src="formulario.js"></script>
+    <title>Cadastro</title>
 </head>
 <body>
+    <header>
+        <nav>
+            
+            <ul class="horizontal-list" id="nav-list">
+                <li><a href="quemsomos.html">Quem Somos</a></li>
+                <li><a href="linksuteis.html">Links Úteis</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="form.html">Formulário</a></li>
+                <button onclick="window.location.href='index.html'">Voltar</button>
+            </ul>
+        </nav>
+    </header>
     
+        <!-- Importânçia do projeto -->
+    <section class="importance-section">
+        <div class="importance-content">
+            <h2 class="importance-title">A Importância do Projeto</h2>
+            <p class="importance-text">O projeto "Informática nas Mãos" tem um papel fundamental na democratização do acesso ao conhecimento tecnológico. Através de cursos gratuitos, proporcionamos oportunidades para que pessoas de todas as idades e contextos sociais possam desenvolver habilidades em informática e se preparar para o mercado de trabalho. Este projeto visa não apenas a inclusão digital, mas também a capacitação profissional, ajudando a transformar vidas e comunidades.</p>
+        </div>
+    </section>
 
     <div class="content">
         <h1>✏️ Formulário </h1>
@@ -66,76 +85,7 @@
             </div>
             <button type="submit">Enviar</button>
         </form>
+        <script src="formulario.js"></script>
     </div>
 </body>
-<script>
-    const form   = document.getElementById('form');
-    const campos = document.querySelectorAll('.required');
-    const spans  = document.querySelectorAll('.span-required');
-    const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        nameValidate();
-        emailValidate();
-        mainPasswordValidate();
-        comparePassword();
-    });
-
-    function setError(index){
-        campos[index].style.border = '2px solid #e63636';
-        spans[index].style.display = 'block';
-    }
-
-    function removeError(index){
-        campos[index].style.border = '';
-        spans[index].style.display = 'none';
-    }
-
-    function nameValidate(){
-        if(campos[0].value.length < 3)
-        {
-            setError(0);
-        }
-        else
-        {
-            removeError(0);
-        }
-    }
-
-    function emailValidate(){
-        if(!emailRegex.test(campos[1].value))
-        {
-            setError(1);
-        }
-        else
-        {
-            removeError(1);
-        }
-    }
-
-    function mainPasswordValidate(){
-        if(campos[2].value.length <script 8)
-        {
-            setError(2);
-        }
-        else
-        {
-            removeError(2);
-            comparePassword();
-        }
-    }
-
-    function comparePassword(){
-        if(campos[2].value == campos[3].value && campos[3].value.length >= 8)
-        {
-            removeError(3);
-        }
-        else
-        {
-            setError(3);
-        }
-    }
-
-</script>
 </html>

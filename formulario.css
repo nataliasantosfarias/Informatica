@@ -1,4 +1,4 @@
-:root{
+:root {
     --color-white: #fff;
     --color-red: #e63636;
     --color-dark1: #181818;
@@ -7,55 +7,63 @@
     --color-purple2: indigo;
 }
 
-*{
-    margin: 5;
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
+body {  /*corpo da página */
+    font-family:  Arial, sans-serif;
     background-color: rgb(226, 162, 35);
     color: var(--color-white);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
+/* header/cabeçalho */
 header {
     background-color: #041E42;
+    width: 100%;
     padding: 10px 20px;
+    margin-bottom: 20px;
 }
-
-.horizontal-list { /* lista de links */
-    padding: 0;
+/* lista de links no header/cabeçalho */
+.horizontal-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     list-style-type: none;
-    text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 .horizontal-list li {
-    display: inline;
     margin: 0 10px;
 }
 
 .horizontal-list a {
     color: orange;
     text-decoration: none;
+    display: inline;
     font-size: 16px;
 }
 
 
-header button { /*Botão voltar */
+/* transição no botão voltar no header/cabeçalho */
+header button:hover {
+    background-color: red;
+}
+/* botão voltar no header/cabeçalho */
+header button {
     background-color: orange;
-    color:  #02224C;
+    color: #02224C;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-header button:hover {
-    background-color: red;
 }
 
 .horizontal-list a:hover {
@@ -65,33 +73,63 @@ header button:hover {
 
 
 
-.content{
+/* sessão informativa antes do formulário */
+.importance-section {
+    
+    color: #02224C;
+    padding: 50px 20px;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+}/* sessão informativa antes do formulário */
+.importance-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+/* sessão informativa antes do formulário */
+.importance-text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* styles formulário */
+.content {
     background-color: var(--color-dark2);
     padding: 2rem;
     border-radius: 10px;
-    min-width: 30%;
-    overflow: auto;
+    width: 100%;
+    max-width: 600px;
 }
 
-h1{
+h1 {
     margin-bottom: 1rem;
     text-align: center;
 }
-
-.content form{
+/* Style formulario */
+.content form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.span-required{
+/* Mensagem span */
+.span-required {
     font-size: 12px;
     margin: 3px 0 0 1px;
     color: var(--color-red);
     display: none;
 }
-
-.inputs{
+label{
+    color : orange;
+}
+p{
+    text-align: center;
+}
+/* campos foormulário */
+.inputs {
     padding: 8px 5px;
     outline: none;
     border-radius: 5px;
@@ -99,22 +137,21 @@ h1{
     border: 2px solid var(--color-dark1);
     color: var(--color-white);
     width: 100%;
-    box-sizing: border-box;
     transition: .3s;
 }
-
-.inputs:focus{
+/* style foco no inputs */
+.inputs:focus {
     border-color: orange;
 }
-
-.box-select{
+/* seleção check box */
+.box-select {
     display: flex;
     justify-content: space-evenly;
     font-weight: bold;
     gap: 1rem;
 }
-
-button[type="submit"]{
+/* Botão enviar do formulário */
+button[type="submit"] {
     padding: 1rem;
     font-size: 1rem;
     outline: none;
@@ -124,16 +161,42 @@ button[type="submit"]{
     background-color: orange;
     color: var(--color-white);
     cursor: pointer;
-    transition: .3s;
+    transition: .2s;
 }
 
-button[type="submit"]:hover{
+button[type="submit"]:hover {
     background-color: green;
 }
 
-@media screen and (max-width: 576px) {
-    .box-select{
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-list {
+        display: none;
         flex-direction: column;
-        gap: 5px;
+        align-items: center;
+        width: 100%;
+        background-color: var(--color-blue);
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    header button {
+        margin-top: 10px;
     }
 }

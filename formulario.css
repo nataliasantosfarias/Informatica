@@ -164,7 +164,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: green;
 }
-
+/* animação  da tela quem somos */
 @keyframes fadeInUp {
     from {
         opacity: 0;

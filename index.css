@@ -10,6 +10,25 @@ body {
 header { /*cabeçalho */
     padding: 10px 20px;
 }
+/* sessão boas-vindas */
+.about-section {
+    padding: 50px;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* animação  da tela quem somos */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 section { /*Todas a sessões da página home/index.html*/
     text-align: center;
 }
@@ -85,4 +104,3 @@ footer {
 #video iframe {
             max-width: 100%;
 }
-       

@@ -30,23 +30,20 @@ header {
     margin-bottom: 20px;
 }
 /* lista de links no header/cabeçalho */
-.horizontal-list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style-type: none;
+.horizontal-list { /* lista de links */
     padding: 0;
-    margin: 0;
+    list-style-type: none;
+    text-align: center;
 }
 
 .horizontal-list li {
+    display: inline;
     margin: 0 10px;
 }
 
 .horizontal-list a {
     color: orange;
     text-decoration: none;
-    display: inline;
     font-size: 16px;
 }
 
